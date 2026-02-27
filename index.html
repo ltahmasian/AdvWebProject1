@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Simple Setups | HW3 Email Campaign</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <style>
+
+    @keyframes slideDown {
+      from { transform: translateY(-20px); letter-spacing: 0.2em; }
+      to   { transform: translateY(0);     letter-spacing: normal; }
+    }
+
+    @keyframes shimmer {
+      0%   { background-position: -400px 0; }
+      100% { background-position: 400px 0; }
+    }
+
+    @keyframes borderPulse {
+      0%   { box-shadow: 0 0 0 0px rgba(17,24,39,0.5); }
+      50%  { box-shadow: 0 0 0 6px rgba(17,24,39,0); }
+      100% { box-shadow: 0 0 0 0px rgba(17,24,39,0); }
+    }
+
+    @keyframes floatUp {
+      0%   { transform: translateY(0px); }
+      50%  { transform: translateY(-5px); }
+      100% { transform: translateY(0px); }
+    }
+
+    .header-title {
+      animation: slideDown 0.7s ease both;
+    }
+
+    .cta-btn {
+      display: inline-block;
+      font-family: arial, sans-serif;
+      font-size: 16px;
+      color: #ffffff;
+      background: linear-gradient(90deg, #111827 25%, #374151 50%, #111827 75%);
+      background-size: 400px 100%;
+      text-decoration: none;
+      padding: 16px 28px;
+      border-radius: 10px;
+      animation: shimmer 2.5s linear infinite, borderPulse 2.5s ease-in-out infinite;
+      transition: transform 0.2s ease, letter-spacing 0.2s ease;
+    }
+    .cta-btn:hover {
+      transform: translateY(-2px);
+      letter-spacing: 0.04em;
+    }
+
+    .inline-link {
+      color: #111827;
+      text-decoration: underline;
+      transition: color 0.2s ease;
+    }
+    .inline-link:hover { color: #6b7280; }
+
+    .float-icon {
+      display: inline-block;
+      animation: floatUp 3s ease-in-out infinite;
+    }
+
+    .tab-radio { display: none; }
+
+    .tab-labels {
+      display: flex;
+      border-bottom: 2px solid #e5e7eb;
+      margin-bottom: 14px;
+    }
+    .tab-label {
+      padding: 8px 16px;
+      font-family: arial, sans-serif;
+      font-size: 13px;
+      color: #6b7280;
+      cursor: pointer;
+      border-bottom: 2px solid transparent;
+      margin-bottom: -2px;
+      transition: color 0.15s, border-color 0.15s;
+    }
+    .tab-label:hover { color: #111827; }
+    .tab-panel { display: none; }
+
+    #tab1:checked ~ .tab-labels .lbl1 { color: #111827; border-bottom-color: #111827; }
+    #tab2:checked ~ .tab-labels .lbl2 { color: #111827; border-bottom-color: #111827; }
+    #tab3:checked ~ .tab-labels .lbl3 { color: #111827; border-bottom-color: #111827; }
+    #tab1:checked ~ .tab-content #panel1 { display: block; }
+    #tab2:checked ~ .tab-content #panel2 { display: block; }
+    #tab3:checked ~ .tab-content #panel3 { display: block; }
+
+    @media only screen and (max-width: 600px) {
+      .two-col td,
+      .three-col td {
+        display: block !important;
+        width: 100% !important;
+        padding-left: 0 !important;
+        padding-right: 0 !important;
+      }
+      h1.main-title  { font-size: 20px !important; }
+      h2.section-h2  { font-size: 15px !important; }
+      .body-text     { font-size: 14px !important; }
+      .col-title     { font-size: 14px !important; }
+      .col-body      { font-size: 13px !important; }
+    }
+
+  </style>
+</head>
+<body style="margin:0; padding:0; background-color:#f3f4f6;">
+
+<table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0"
+       style="background-color:#f3f4f6;">
+  <tr>
+    <td align="center" style="padding:30px 10px;">
+
+      <table role="presentation" width="600" cellpadding="0" cellspacing="0" border="0"
+             style="width:100%; max-width:600px; background-color:#ffffff; border-collapse:collapse;">
+
+        <tr>
+          <td style="background-color:#111827; padding:18px 20px;">
+            <div class="header-title"
+                 style="font-family:arial, sans-serif; font-size:18px; font-weight:bold; color:#ffffff;">
+              Simple Setups
+            </div>
+            <div style="font-family:arial, sans-serif; font-size:12px; color:#d1d5db; margin-top:6px;">
+              HW3 Email Campaign
+            </div>
+          </td>
+        </tr>
+
+        <tr>
+          <td style="padding:20px;">
+            <h1 class="main-title"
+                style="margin:0; font-family:arial, sans-serif; font-size:24px; color:#111827;">
+              5-minute Desk Reset
+              <span class="float-icon" style="font-size:18px; margin-left:4px;">✦</span>
+            </h1>
+            <p class="body-text"
+               style="margin:10px 0 0 0; font-family:arial, sans-serif; font-size:16px; line-height:22px; color:#374151;">
+              A simple checklist to keep your setup clean, minimal, and productive.
+            </p>
+          </td>
+        </tr>
+
+        <tr>
+          <td align="center" style="padding:0 20px 20px 20px;">
+            <img src="setupPic.jpg"
+                 alt="minimal desk setup with laptop and notebook"
+                 style="width:100%; max-width:560px; height:auto; display:block; border-radius:10px;" />
+          </td>
+        </tr>
+
+        <tr>
+          <td style="padding:0 20px 10px 20px;">
+            <h2 class="section-h2"
+                style="margin:0 0 10px 0; font-family:arial, sans-serif; font-size:18px; color:#111827;">
+              What's included:
+            </h2>
+            <p style="margin:0 0 8px 0; font-family:arial, sans-serif; font-size:15px; line-height:22px; color:#374151;">
+              &bull; Quick 5-step reset checklist
+            </p>
+            <p style="margin:0 0 8px 0; font-family:arial, sans-serif; font-size:15px; line-height:22px; color:#374151;">
+              &bull; Minimal cable-management tip
+            </p>
+            <p style="margin:0; font-family:arial, sans-serif; font-size:15px; line-height:22px; color:#374151;">
+              &bull; One affordable &ldquo;small upgrade&rdquo; idea
+            </p>
+          </td>
+        </tr>
+
+        <tr>
+          <td style="padding:20px 20px 10px 20px;">
+            <h2 class="section-h2"
+                style="margin:0 0 12px 0; font-family:arial, sans-serif; font-size:18px; color:#111827;">
+              This Week
+            </h2>
+            <table class="two-col" role="presentation" cellpadding="0" cellspacing="0"
+                   border="0" width="100%">
+              <tr>
+                <td style="width:50%; vertical-align:top; padding-right:10px; padding-bottom:10px;">
+                  <div style="border-left:3px solid #111827; background-color:#f9fafb; padding:14px; border-radius:0 8px 8px 0;">
+                    <p class="col-title"
+                       style="margin:0 0 6px 0; font-family:arial, sans-serif; font-size:12px; font-weight:bold; color:#111827; text-transform:uppercase; letter-spacing:0.06em;">
+                      Tip of the week
+                    </p>
+                    <p class="col-body"
+                       style="margin:0; font-family:arial, sans-serif; font-size:14px; line-height:21px; color:#374151;">
+                      Run an adhesive clip strip along the back edge of your desk to hide cables. 10 minutes, massive visual difference.
+                    </p>
+                  </div>
+                </td>
+                <td style="width:50%; vertical-align:top; padding-left:10px; padding-bottom:10px;">
+                  <div style="background-color:#111827; padding:14px; border-radius:8px; text-align:center;">
+                    <p style="margin:0; font-family:arial, sans-serif; font-size:38px; font-weight:bold; color:#ffffff; line-height:1.1;">
+                      73%
+                    </p>
+                    <p class="col-body"
+                       style="margin:8px 0 0 0; font-family:arial, sans-serif; font-size:13px; line-height:19px; color:#d1d5db;">
+                      of people say a cleaner desk immediately improves their focus.
+                    </p>
+                  </div>
+                </td>
+              </tr>
+            </table>
+          </td>
+        </tr>
+
+        <tr>
+          <td style="padding:10px 20px 10px 20px;">
+            <h2 class="section-h2"
+                style="margin:0 0 12px 0; font-family:arial, sans-serif; font-size:18px; color:#111827;">
+              3 Affordable Upgrades
+            </h2>
+            <table class="three-col" role="presentation" cellpadding="0" cellspacing="0"
+                   border="0" width="100%">
+              <tr>
+                <td style="width:33.33%; vertical-align:top; padding-right:7px; padding-bottom:10px;">
+                  <div style="border:1px solid #e5e7eb; border-radius:8px; padding:14px; text-align:center;">
+                    <div style="font-size:28px; margin-bottom:8px;">&#128421;</div>
+                    <p class="col-title"
+                       style="margin:0 0 4px 0; font-family:arial, sans-serif; font-size:13px; font-weight:bold; color:#111827;">
+                      Monitor Riser
+                    </p>
+                    <p class="col-body"
+                       style="margin:0; font-family:arial, sans-serif; font-size:12px; line-height:18px; color:#6b7280;">
+                      Lift your screen to eye level. ~$25 and posture-changing.
+                    </p>
+                  </div>
+                </td>
+                <td style="width:33.33%; vertical-align:top; padding-left:3px; padding-right:3px; padding-bottom:10px;">
+                  <div style="border:1px solid #e5e7eb; border-radius:8px; padding:14px; text-align:center; background-color:#f9fafb;">
+                    <div style="font-size:28px; margin-bottom:8px;">&#128161;</div>
+                    <p class="col-title"
+                       style="margin:0 0 4px 0; font-family:arial, sans-serif; font-size:13px; font-weight:bold; color:#111827;">
+                      Desk Lamp
+                    </p>
+                    <p class="col-body"
+                       style="margin:0; font-family:arial, sans-serif; font-size:12px; line-height:18px; color:#6b7280;">
+                      Warm light reduces eye strain on long sessions.
+                    </p>
+                  </div>
+                </td>
+                <td style="width:33.33%; vertical-align:top; padding-left:7px; padding-bottom:10px;">
+                  <div style="border:1px solid #e5e7eb; border-radius:8px; padding:14px; text-align:center;">
+                    <div style="font-size:28px; margin-bottom:8px;">&#128203;</div>
+                    <p class="col-title"
+                       style="margin:0 0 4px 0; font-family:arial, sans-serif; font-size:13px; font-weight:bold; color:#111827;">
+                      Desk Pad
+                    </p>
+                    <p class="col-body"
+                       style="margin:0; font-family:arial, sans-serif; font-size:12px; line-height:18px; color:#6b7280;">
+                      Ties the whole setup together and protects the surface.
+                    </p>
+                  </div>
+                </td>
+              </tr>
+            </table>
+          </td>
+        </tr>
+
+        <tr>
+          <td style="padding:10px 20px 10px 20px;">
+            <h2 class="section-h2"
+                style="margin:0 0 12px 0; font-family:arial, sans-serif; font-size:18px; color:#111827;">
+              The 5-Step Reset &mdash; Pick a Step
+            </h2>
+            <div style="background-color:#f9fafb; border:1px solid #e5e7eb; border-radius:10px; padding:18px;">
+
+              <input class="tab-radio" type="radio" name="step" id="tab1" checked />
+              <input class="tab-radio" type="radio" name="step" id="tab2" />
+              <input class="tab-radio" type="radio" name="step" id="tab3" />
+
+              <div class="tab-labels">
+                <label class="tab-label lbl1" for="tab1">Step 1</label>
+                <label class="tab-label lbl2" for="tab2">Step 2</label>
+                <label class="tab-label lbl3" for="tab3">Step 3</label>
+              </div>
+
+              <div class="tab-content">
+                <div class="tab-panel" id="panel1">
+                  <p style="margin:0; font-family:arial, sans-serif; font-size:15px; line-height:22px; color:#374151;">
+                    <strong>Clear the surface.</strong><br>
+                    Remove everything that doesn&rsquo;t belong. If you haven&rsquo;t touched it today, put it away. Start with a blank slate.
+                  </p>
+                </div>
+                <div class="tab-panel" id="panel2">
+                  <p style="margin:0; font-family:arial, sans-serif; font-size:15px; line-height:22px; color:#374151;">
+                    <strong>Manage your cables.</strong><br>
+                    Bundle and route cables behind the desk. One loose cable makes the whole setup look messy.
+                  </p>
+                </div>
+                <div class="tab-panel" id="panel3">
+                  <p style="margin:0; font-family:arial, sans-serif; font-size:15px; line-height:22px; color:#374151;">
+                    <strong>Place only your essentials.</strong><br>
+                    Put back only what you actively use: laptop, notebook, one pen. Everything else earns its spot later.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </td>
+        </tr>
+
+        <tr>
+          <td style="padding:20px;">
+            <div style="
+              background-image: url('images/bg-texture.jpg');
+              background-size: cover;
+              background-position: center;
+              background-color: #111827;
+              border-radius: 12px;
+              padding: 16px;
+            ">
+              <p style="margin:0 0 6px 0; font-family:arial, sans-serif; font-size:12px; color:#e5e7eb;">
+                This week&rsquo;s focus:
+              </p>
+              <p style="margin:0; font-family:arial, sans-serif; font-size:16px; font-weight:bold; color:#ffffff;">
+                Make your desk &ldquo;ready to start&rdquo; in under 5 minutes.
+              </p>
+            </div>
+          </td>
+        </tr>
+
+        <tr>
+          <td style="padding:0 20px 16px 20px;">
+            <p class="body-text"
+               style="margin:0; font-family:arial, sans-serif; font-size:14px; line-height:22px; color:#6b7280;">
+              More from Simple Setups:
+              <a href="#" class="inline-link">Cable management guide</a> &middot;
+              <a href="#" class="inline-link">Best budget accessories</a> &middot;
+              <a href="#" class="inline-link">Minimal wallpapers</a>
+            </p>
+          </td>
+        </tr>
+
+        <!-- CTA BUTTON -->
+        <tr>
+          <td align="center" style="padding:10px 20px 30px 20px;">
+            <a href="#" class="cta-btn">Get the checklist</a>
+          </td>
+        </tr>
+
+        <tr>
+          <td style="background-color:#f9fafb; padding:18px 20px;">
+            <p style="margin:0; font-family:arial, sans-serif; font-size:12px; line-height:18px; color:#6b7280;">
+              You&rsquo;re receiving this email because you signed up for Simple Setups updates.
+            </p>
+            <p style="margin:10px 0 0 0; font-family:arial, sans-serif; font-size:12px;">
+              <a href="#" style="color:#111827; text-decoration:underline;">Unsubscribe</a>
+              &nbsp;&middot;&nbsp;
+              <a href="#" class="inline-link" style="font-size:12px;">View in browser</a>
+            </p>
+          </td>
+        </tr>
+
+      </table>
+
+    </td>
+  </tr>
+</table>
+
+</body>
+</html>
